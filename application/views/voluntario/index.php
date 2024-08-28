@@ -72,8 +72,10 @@
                                                     <tr>
                                                         <th class="text-center">Foto</th>
                                                         <th class="text-center">Nome</th>
-                                                        <th class="text-center">CPF</th>
-                                                        <th class="text-center">Celular</th>
+                                                        <?php if ($this->ion_auth->is_admin()) : ?>
+                                                            <th class="text-center">CPF</th>
+                                                            <th class="text-center">Celular</th>
+                                                        <?php endif; ?>
                                                         <th class="text-center">E-mail</th>
                                                         <th class="text-center">Observação</th>
                                                     </tr>
@@ -87,8 +89,10 @@
                                                                 <td class="text-center">FOTO</td>
                                                             <?php endif; ?>
                                                             <td class="text-center"><?= mb_strtoupper($voluntario->nome); ?></td>
-                                                            <td class="text-center"><?= $voluntario->cpf; ?></td>
-                                                            <td class="text-center"><?= $voluntario->celular; ?></td>
+                                                            <?php if ($this->ion_auth->is_admin()) : ?>
+                                                                <td class="text-center"><?= $voluntario->cpf; ?></td>
+                                                                <td class="text-center"><?= $voluntario->celular; ?></td>
+                                                            <?php endif; ?>    
                                                             <td class="text-center"><?= $voluntario->email ?></td>
                                                             <td class="text-center"><?= $voluntario->observacao; ?></td>
                                                             </tr>

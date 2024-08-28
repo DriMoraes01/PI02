@@ -67,10 +67,12 @@
                                         <div class="table-responsive-sm">
                                             <table class="table data-table table-sm pl-20 pr-20">
                                                 <thead>
-                                                    <tr>                                                       
+                                                    <tr>
                                                         <th class="text-center">Nome</th>
                                                         <th class="text-center">Valor</th>
-                                                        <th class="text-center">E-mail</th>
+                                                        <?php if ($this->ion_auth->is_admin()) : ?>
+                                                            <th class="text-center">E-mail</th>
+                                                        <?php endif; ?>
                                                         <th class="text-center">Data da Doação</th>
                                                         <th class="nosort text-right pr-25">Ações</th>
                                                     </tr>
@@ -78,18 +80,28 @@
                                                 <tbody>
                                                     <?php if (isset($doacoes)) : ?>
                                                         <?php foreach ($doacoes as $doacao) : ?>
-                                                            <tr>                                                                
+                                                            <tr>
                                                                 <td class="text-center"><?= mb_strtoupper($doacao->nome); ?></td>
                                                                 <td class="text-center">R$ &nbsp;<?= $doacao->valor; ?></td>
+                                                                <?php if ($this->ion_auth->is_admin()) : ?>
                                                                 <td class="text-center"><?= $doacao->email; ?></td>
+                                                                <?php endif; ?>
                                                                 <td class="text-center"><?= formata_data_banco_sem_hora($doacao->data_doacao); ?></td>
-                                                                <td class="nosort text-right pr-25">
-                                                                    <div class="table-actions">
-                                                                        <a data-toggle="tooltip" data-placement="bottom" title="Visualizar <?= $this->router->fetch_class(); ?>" href="<?= base_url($this->router->fetch_class()) . '/visualizar/' . $doacao->id; ?> " class="btn btn-icon btn-primary"><i class="ik ik-eye text-info"></i>
+                                                                <?php if ($this->ion_auth->is_admin()) : ?>
+                                                                    <td class="nosort text-center pr-100">
+                                                                        <div class="table-actions">
+                                                                            <a data-toggle="tooltip" data-placement="bottom" title="Visualizar <?= $this->router->fetch_class(); ?>" href="<?= base_url($this->router->fetch_class()) . '/visualizar/' . $doacao->id; ?> " class="btn btn-icon btn-primary"><i class="ik ik-eye text-info"></i><a data-toggle="tooltip" data-placement="bottom" title="Editar <?= $this->router->fetch_class(); ?>" href="<?= base_url($this->router->fetch_class()) . '/alterar/' . $doacao->id; ?> " class="btn btn-icon btn-primary"><i class="ik ik-edit-2"></i></a></a>
+                                                                            <button type="button" data-toggle="modal" data-target="#categoria-<?= $doacao->id; ?>" data-placement="bottom" title="Excluir <?= $this->router->fetch_class(); ?>" class="btn btn-icon btn-danger"><i class="ik ik-trash-2"></i></button>
+                                                                        </div>
+                                                                    </td>
+                                                                <?php else: ?>
+                                                                    <td class="nosort text-center pr-100">
+                                                                        <div class="table-actions">
                                                                             <a data-toggle="tooltip" data-placement="bottom" title="Editar <?= $this->router->fetch_class(); ?>" href="<?= base_url($this->router->fetch_class()) . '/alterar/' . $doacao->id; ?> " class="btn btn-icon btn-primary"><i class="ik ik-edit-2"></i></a></a>
-                                                                        <button type="button" data-toggle="modal" data-target="#categoria-<?= $doacao->id; ?>" data-placement="bottom" title="Excluir <?= $this->router->fetch_class(); ?>" class="btn btn-icon btn-danger"><i class="ik ik-trash-2"></i></button>
-                                                                    </div>
-                                                                </td>
+                                                                            <button type="button" data-toggle="modal" data-target="#categoria-<?= $doacao->id; ?>" data-placement="bottom" title="Excluir <?= $this->router->fetch_class(); ?>" class="btn btn-icon btn-danger"><i class="ik ik-trash-2"></i></button>
+                                                                        </div>
+                                                                    </td>
+                                                                <?php endif; ?>
                                                             </tr>
                                                             <div class="modal fade" id="categoria-<?= $doacao->id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterLabel" aria-hidden="true">
                                                                 <div class="modal-dialog modal-dialog-centered" role="document" id="categoria-<?= $doacao->id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterLabel" aria-hidden="true">

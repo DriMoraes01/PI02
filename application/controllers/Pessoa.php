@@ -28,13 +28,13 @@ class Pessoa extends CI_Controller {
 			'scripts' =>array(
 				'plugins/datatables.net/js/jquery.dataTables.min.js',
 				'plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js',				
-			),	
+			),				
 		);		
 		
-
+		
 		$this->load->view('layout/header',$data);
 		$this->load->view('pessoa/index');
-		$this->load->view('layout/footer');		
+		$this->load->view('layout/footer');			
 
 	}
 		
