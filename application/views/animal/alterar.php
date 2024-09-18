@@ -27,23 +27,23 @@
                     </div>
                 </div>
             </div>
-            
-             <?php if ($error = $this->session->flashdata('error')) : ?>
 
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="alert bg-danger alert-danger text-white alert-dismissible fade show" role="alert">
-                                        <strong><?= $error; ?></strong>
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <i class="ik ik-x"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div> 
+            <?php if ($error = $this->session->flashdata('error')) : ?>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert bg-danger alert-danger text-white alert-dismissible fade show" role="alert">
+                            <strong><?= $error; ?></strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="ik ik-x"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             <?php endif; ?>
 
 
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-md-12">
                     <?php foreach ($animais as $animal) : ?>
                         <div class="card">
@@ -124,7 +124,7 @@
                                             <div class="form-group">
                                                 <label for="foto">Foto do Animal</label>
                                                 <input type="file" class="form-control" id="foto" name="foto" value=" <?= set_value('foto'); ?>" required>
-                                                <!--<//?= form_error('foto', '<div class="text-danger">', '</div>'); ?> -->
+                                                <//?= form_error('foto', '<div class="text-danger">', '</div>'); ?> 
                                             </div>
                                         </div>
                                     </div>
@@ -146,6 +146,100 @@
                                 </form>
                             </div>
                         </div>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-md-12">
+                    <?php foreach ($animais as $animal) : ?>
+                        <div class="card">
+                            <div class="card-header">
+                                <?= (isset($animal) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i>&nbsp;Data da última alteração: &nbsp;' . date("d/m/Y H:i:s", strtotime($animal->ultima_alteracao)) : ''); ?>
+                            </div>
+                            <div class="card-body">
+                                <form class="forms-sample" id="form_core" name="form_core" method="POST" enctype="multipart/form-data" aria-describedby="formInstructions">
+                                    <p id="formInstructions" class="sr-only">Preencha os campos abaixo com as informações do animal.</p> <!-- Instruções ocultas para leitores de tela -->
+
+                                    <div class="form-group row">
+                                        <div class="col-md-4 mb-20">
+                                            <label for="nome">Nome do Animal</label>
+                                            <input type="text" class="form-control" id="nome" name="nome" value="<?= (isset($animal) ? $animal->nome : set_value('nome')); ?>" style="text-transform: uppercase;" aria-required="true">
+                                            <?= form_error('nome', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                        </div>
+                                        <div class="form-group pr-20">
+                                            <label for="castrado">Castrado</label>
+                                            <select name="castrado" id="castrado" aria-required="true">
+                                                <option value="1">Sim</option>
+                                                <option value="0">Não</option>
+                                            </select>
+                                            <?= form_error('castrado', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                        </div>
+                                        <div class="col-md-2 mb-20">
+                                            <label for="data_cadastro">Data de Cadastro</label>
+                                            <input type="date" class="form-control" id="data_cadastro" name="data_cadastro" value="<?= (isset($animal) ? $animal->data_cadastro : set_value('data_cadastro')); ?>" aria-required="true">
+                                            <?= form_error('data_cadastro', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-2">
+                                            <label for="cor">Cor</label>
+                                            <input type="text" class="form-control" id="cor" name="cor" value="<?= (isset($animal) ? $animal->cor : set_value('cor')); ?>" aria-required="true">
+                                            <?= form_error('cor', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                        </div>
+                                        <div class="col-md-2 mb-20">
+                                            <label for="raca">Raça</label>
+                                            <input type="text" id="raca" class="form-control" name="raca" value="<?= (isset($animal) ? $animal->raca : set_value('raca')); ?>" aria-required="true">
+                                            <?= form_error('raca', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="porte">Porte</label>
+                                            <select name="porte" id="porte" aria-required="true">
+                                                <option value="Pequeno">Pequeno</option>
+                                                <option value="Médio">Médio</option>
+                                                <option value="Grande">Grande</option>
+                                            </select>
+                                            <?= form_error('porte', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="sexo">Sexo</label>
+                                            <select name="sexo" id="sexo" aria-required="true">
+                                                <option value="Macho">Macho</option>
+                                                <option value="Fêmea">Fêmea</option>
+                                            </select>
+                                            <?= form_error('sexo', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                            <label for="observacao">Observação</label>
+                                            <input type="text" class="form-control" id="observacao" name="observacao" value="<?= (isset($animal) ? $animal->observacao : set_value('observacao')); ?>">
+                                            <?= form_error('observacao', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                            <label for="foto">Foto do Animal</label>
+                                            <input type="file" class="form-control" id="foto" name="foto" aria-describedby="fotoHelp" aria-required="true">
+                                            <small id="fotoHelp" class="form-text text-muted">Envie uma foto do animal no formato JPEG ou PNG.</small>
+                                        </div>
+                                    </div>
+
+                                    <?php if (isset($animal)) : ?>
+                                        <input type="hidden" name="id" value="<?= $animal->id_animal; ?>">
+                                    <?php endif; ?>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-12 ml-20">
+                                            <button type="submit" class="btn btn-primary mr-2">Salvar</button>
+                                            <a href="<?= base_url($this->router->fetch_class()); ?>" class="btn btn-info">Voltar</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
