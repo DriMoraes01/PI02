@@ -152,9 +152,9 @@
                 <div class="col-md-12">
                     <?php foreach ($animais as $animal) : ?>
                         <div class="card">
-                            <div class="card-header">
+                            <!--<div class="card-header">
                                 <?= (isset($animal) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i>&nbsp;Data da última alteração: &nbsp;' . date("d/m/Y H:i:s", strtotime($animal->ultima_alteracao)) : ''); ?>
-                            </div>
+                            </div> -->
                             <div class="card-body">
                                 <form class="forms-sample" id="form_core" name="form_core" method="POST" enctype="multipart/form-data" aria-describedby="formInstructions">
                                     <p id="formInstructions" class="sr-only">Preencha os campos abaixo com as informações do animal.</p> <!-- Instruções ocultas para leitores de tela -->

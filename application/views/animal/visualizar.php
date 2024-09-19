@@ -117,9 +117,9 @@
                 <div class="col-md-12">
                     <?php foreach ($animais as $animal) : ?>
                         <div class="card">
-                            <div class="card-header" aria-live="polite">
+                            <!--<div class="card-header" aria-live="polite">
                                 <?= (isset($animal) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i>&nbsp;Data da última alteração: &nbsp;' . date("d/m/Y H:i:s", strtotime($animal->ultima_alteracao)) : ''); ?>
-                            </div>
+                            </div> -->
                             <div class="card-body">
                                 <form class="forms-sample" id="form_core" name="form_core" method="POST">
                                     <div class="form-group row">

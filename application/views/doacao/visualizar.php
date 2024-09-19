@@ -88,9 +88,9 @@
                 <div class="col-md-12">
                     <?php foreach ($doacoes as $doacao) : ?>
                         <div class="card">
-                            <div class="card-header">
+                           <!-- <div class="card-header">
                                 <?= (isset($doacao) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i>&nbsp;Data da última alteração: &nbsp;' . date("d/m/Y H:i:s", strtotime($doacao->ultima_alteracao)) : ''); ?>
-                            </div>
+                            </div> -->
                             <div class="card-body">
                                 <form class="forms-sample" id="form_core" name="form_core" method="POST" aria-describedby="formInstructions">
                                     <p id="formInstructions" class="sr-only">Detalhes da doação listados abaixo.</p> <!-- Instruções ocultas para leitores de tela -->

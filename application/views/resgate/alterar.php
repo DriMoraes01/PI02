@@ -141,9 +141,9 @@
                 <div class="col-md-12">
                     <?php foreach ($resgates as $resgate) : ?>
                         <div class="card">
-                            <div class="card-header" aria-live="polite">
+                            <!--<div class="card-header" aria-live="polite">
                                 <?= isset($resgate) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i> Data da última alteração: ' . date("d/m/Y H:i:s", strtotime($resgate->ultima_alteracao)) : ''; ?>
-                            </div>
+                            </div> -->
                             <div class="card-body">
                                 <form class="forms-sample" id="form_core" name="form_core" method="POST" aria-labelledby="form-title-<?= $resgate->id; ?>">
                                     <h2 id="form-title-<?= $resgate->id; ?>" class="sr-only">Formulário de Resgate de Animal</h2>

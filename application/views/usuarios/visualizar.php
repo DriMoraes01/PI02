@@ -34,7 +34,7 @@
 
             <?php if (isset($usuario)) : ?>
                 <?php foreach ($usuario as $usuario) : ?>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header"><?= (isset($usuario) ? '<i class="ik ik-calendar ik-2x"></i>&nbsp;Data da última alteração: &nbsp;' . formata_data_banco_com_hora($usuario->ultima_alteracao) : ''); ?></div>
@@ -80,14 +80,69 @@
                                         <?php endif; ?>
 
                                     <?php endforeach; ?>
-                                    <!--<button type="submit" class="btn btn-primary mr-2">Salvar</button> -->
+                                <button type="submit" class="btn btn-primary mr-2">Salvar</button> 
                                     <a href="<?= base_url('/home'); ?>" class="btn btn-info">Voltar</a>
                                 <?php endif; ?>
                                     </form>
                                 </div>
                             </div>
                         </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <!--<div class="card-header" aria-live="polite">
+                                    <?= (isset($usuario) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i>&nbsp;<span>Data da última alteração: &nbsp;' . formata_data_banco_com_hora($usuario->ultima_alteracao) . '</span>' : ''); ?>
+                                </div> -->
+                                <div class="card-body">
+                                    <form class="forms-sample" name="form_core" method="POST">
+                                        <div class="form-group row">
+                                            <div class="col-md-6 mb-20">
+                                                <label for="first_name">Nome</label>
+                                                <input type="text" class="form-control" id="first_name" name="first_name" value="<?= isset($usuario) ? $usuario->first_name : ''; ?>" readonly="" aria-readonly="true">
+                                            </div>
+                                            <div class="col-md-6 mb-20">
+                                                <label for="last_name">Sobrenome</label>
+                                                <input type="text" class="form-control" id="last_name" name="last_name" value="<?= isset($usuario) ?  $usuario->last_name : ''; ?>" readonly="" aria-readonly="true">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-6 mb-20">
+                                                <label for="username">Usuário</label>
+                                                <input type="text" class="form-control" id="username" name="username" value="<?= $usuario->username; ?>" readonly="" aria-readonly="true">
+                                            </div>
+                                            <div class="col-md-6 mb-20">
+                                                <label for="email">E-mail (Login)</label>
+                                                <input type="email" class="form-control" id="email" name="email" value="<?= $usuario->email; ?>" readonly="" aria-readonly="true">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-6 mb-20">
+                                                <label for="access_profile">Perfil de Acesso</label>
+                                                <input type="text" class="form-control" id="access_profile" name="access_profile" value="<?= ($perfil_usuario->id == 2 ? 'User' : 'Administrador'); ?>" readonly="" aria-readonly="true">
+                                            </div>
+                                            <div class="col-md-6 mb-20">
+                                                <label for="active_status">Ativo</label>
+                                                <input type="text" class="form-control" id="active_status" name="active_status" value="<?= ($usuario->active == 0 ? 'Não' : 'Sim'); ?>" readonly="" aria-readonly="true">
+                                            </div>
+                                        </div>
+
+                                        <?php if (isset($usuario)) : ?>
+                                            <div class="form-group row">
+                                                <div class="col-md-12">
+                                                    <input type="hidden" class="form-control" name="usuario_id" value="<?= $usuario->id; ?>">
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+
+                                        <!-- <button type="submit" class="btn btn-primary mr-2">Salvar</button> -->
+                                        <a href="<?= base_url('usuarios/index'); ?>" class="btn btn-info" aria-label="Voltar para a página inicial">Voltar</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
 
         </div>
     </div>

@@ -165,9 +165,9 @@
                         <div class="col-md-12">
                             <?php foreach ($pessoas as $pessoa) : ?>
                                 <div class="card">
-                                    <div class="card-header">
+                                    <!--<div class="card-header">
                                         <?= isset($pessoa) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i>&nbsp;Data da última alteração: &nbsp;' . formata_data_banco_com_hora($pessoa->ultima_alteracao) : ''; ?>
-                                    </div>
+                                    </div> -->
                                     <div class="card-body">
                                         <form class="forms-sample" name="form_core" method="POST" aria-labelledby="formTitle">
                                             <fieldset>

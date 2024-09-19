@@ -170,9 +170,9 @@
                 <div class="col-md-12">
                     <?php foreach ($adocoes as $adocao) : ?>
                         <div class="card">
-                            <div class="card-header">
+                            <!--<div class="card-header">
                                 <?= (isset($adocao) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i><span class="sr-only">Data da última alteração:</span>&nbsp;' . date("d/m/Y H:i:s", strtotime($adocao->ultima_alteracao)) : ''); ?>
-                            </div>
+                            </div> -->
                             <div class="card-body">
                                 <form class="forms-sample" id="form_core" name="form_core" method="POST" aria-labelledby="form_heading">
                                     <fieldset>
