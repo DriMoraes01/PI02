@@ -29,7 +29,7 @@
             </div>
 
 
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header"></div>
@@ -131,6 +131,91 @@
                         </form>
                     </div>
                 </div>
+            </div> -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <form name="form_core" method="POST" aria-labelledby="form-title">
+                                <h2 id="form-title" class="sr-only">Formulário de Cadastro de Resgate de Animais</h2>
+                                <div class="form-group row">
+                                    <div class="col-md-2 mb-20">
+                                        <label for="animal">Tipo de Animal</label>
+                                        <input type="text" class="form-control" id="animal" name="animal" value="<?= set_value('animal'); ?>" placeholder="Gato" aria-describedby="animalHelp">
+                                        <?= form_error('animal', '<div class="text-danger" id="animalHelp">', '</div>'); ?>
+                                    </div>
+                                    <div class="col-md-2 mb-20">
+                                        <label for="data_resgate">Data de Resgate</label>
+                                        <input type="date" class="form-control" id="data_resgate" name="data_resgate" value="<?= set_value('data_resgate'); ?>" aria-describedby="dataResgateHelp">
+                                        <?= form_error('data_resgate', '<div class="text-danger" id="dataResgateHelp">', '</div>'); ?>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="sexo">Sexo</label>
+                                        <select name="sexo" id="sexo" class="form-control" aria-describedby="sexoHelp">
+                                            <option value="Macho">Macho</option>
+                                            <option value="Fêmea">Fêmea</option>
+                                        </select>
+                                        <?= form_error('sexo', '<div class="text-danger" id="sexoHelp">', '</div>'); ?>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3 mb-20">
+                                        <label for="cep">CEP:</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="00000-000" id="cep" name="cep" maxlength="9" onblur="pesquisacep(this.value)" aria-describedby="cepHelp">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                                            </div>
+                                            <?= form_error('cep', '<div class="text-danger" id="cepHelp">', '</div>'); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <label for="logradouro">Logradouro:</label>
+                                        <input type="text" class="form-control" id="logradouro" name="logradouro" aria-describedby="logradouroHelp">
+                                        <?= form_error('logradouro', '<div class="text-danger" id="logradouroHelp">', '</div>'); ?>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label for="numero">N°:</label>
+                                        <input type="text" class="form-control" id="numero" name="numero" aria-describedby="numeroHelp">
+                                        <?= form_error('numero', '<div class="text-danger" id="numeroHelp">', '</div>'); ?>
+                                    </div>
+                                    <div class="col-md-3 ml-20">
+                                        <label for="bairro">Bairro:</label>
+                                        <input type="text" class="form-control" id="bairro" name="bairro" aria-describedby="bairroHelp">
+                                        <?= form_error('bairro', '<div class="text-danger" id="bairroHelp">', '</div>'); ?>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <label for="localidade">Cidade:</label>
+                                        <input type="text" class="form-control" id="localidade" name="localidade" aria-describedby="localidadeHelp">
+                                        <?= form_error('localidade', '<div class="text-danger" id="localidadeHelp">', '</div>'); ?>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label for="uf">UF:</label>
+                                        <input type="text" class="form-control" id="uf" name="uf" aria-describedby="ufHelp">
+                                        <?= form_error('uf', '<div class="text-danger" id="ufHelp">', '</div>'); ?>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="observacao">Observação</label>
+                                        <input type="text" class="form-control" id="observacao" name="observacao" aria-describedby="observacaoHelp">
+                                        <?= form_error('observacao', '<div class="text-danger" id="observacaoHelp">', '</div>'); ?>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-6 ml-20">
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                        <a href="<?= base_url($this->router->fetch_class()); ?>" class="btn btn-info ml-20">Voltar</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>

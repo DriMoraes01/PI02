@@ -57,7 +57,7 @@
 
                         <?php endif; ?>
 
-                        <div class="row">
+                        <!--<div class="row">
                             <div class="col-md-12">
                                 <div class="card">
                                     <?php if ($this->ion_auth->is_admin()) : ?>
@@ -74,7 +74,7 @@
                                                         <th class="text-center">Nome</th>
                                                         <?php if ($this->ion_auth->is_admin()) : ?>
                                                             <th class="text-center">CPF</th>
-                                                            <th class="text-center">Celular</th>
+                                                            <th class="text-center">Celular</th> 
                                                         <?php endif; ?>
                                                         <th class="text-center">E-mail</th>
                                                         <th class="text-center">Observação</th>
@@ -111,6 +111,76 @@
                                                                         <div class="modal-footer">
                                                                             <button data-toggle="tooltip" data-placement="bottom" title="Cancelar Exclusão" type="button" class="btn btn-secondary" data-dismiss="modal">Não, voltar</button>
                                                                             <a data-toggle="tooltip" data-placement="bottom" title="Excluir <?= $this->router->fetch_class(); ?>" href="<?= base_url($this->router->fetch_class()) . '/del/' . $adocao->id; ?> " class="btn btn-danger">Sim, excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <?php if ($this->ion_auth->is_admin()) : ?>
+                                        <div class="card-header d-block"></div>
+                                    <?php else : ?>
+                                        <div class="card-header d-block"></div>
+                                    <?php endif; ?>
+                                    <div class="card-body">
+                                        <div class="table-responsive-sm">
+                                            <table class="table data-table table-sm pl-20 pr-20" aria-describedby="voluntariosTableDesc">
+                                                <caption id="voluntariosTableDesc" class="sr-only">Lista de voluntários com foto, nome, e informações de contato.</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="text-center">Foto</th>
+                                                        <th scope="col" class="text-center">Nome</th>
+                                                        <?php if ($this->ion_auth->is_admin()) : ?>
+                                                            <th scope="col" class="text-center">CPF</th>
+                                                            <th scope="col" class="text-center">Celular</th>
+                                                        <?php endif; ?>
+                                                        <th scope="col" class="text-center">E-mail</th>
+                                                        <th scope="col" class="text-center">Observação</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php if (isset($voluntarios)) : ?>
+                                                        <?php foreach ($voluntarios as $voluntario) : ?>
+                                                            <tr>
+                                                                <?php if (isset($voluntario->foto)) : ?>
+                                                                    <td class="text-center"><img width="50" height="50" class="rounded-circle" src="<?= base_url($voluntario->foto) ?>" alt="Foto de <?= mb_strtoupper($voluntario->nome); ?>"></td>
+                                                                <?php else : ?>
+                                                                    <td class="text-center">Sem Foto</td>
+                                                                <?php endif; ?>
+                                                                <td class="text-center"><?= mb_strtoupper($voluntario->nome); ?></td>
+                                                                <?php if ($this->ion_auth->is_admin()) : ?>
+                                                                    <td class="text-center"><?= $voluntario->cpf; ?></td>
+                                                                    <td class="text-center"><?= $voluntario->celular; ?></td>
+                                                                <?php endif; ?>
+                                                                <td class="text-center"><?= $voluntario->email ?></td>
+                                                                <td class="text-center"><?= $voluntario->observacao; ?></td>
+                                                            </tr>
+                                                            <!-- Modal de confirmação de exclusão -->
+                                                            <div class="modal fade" id="categoria-<?= $voluntario->id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterLabel-<?= $voluntario->id; ?>" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="exampleModalCenterLabel-<?= $voluntario->id; ?>"><i class="fas fa-exclamation-triangle text-danger"></i>&nbsp;Tem certeza que quer excluir?</h5>
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <p>Para apagar o registro, clique em <strong>Sim, excluir</strong> </p>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button data-toggle="tooltip" data-placement="bottom" title="Cancelar Exclusão" type="button" class="btn btn-secondary" data-dismiss="modal">Não, voltar</button>
+                                                                            <a data-toggle="tooltip" data-placement="bottom" title="Excluir <?= $this->router->fetch_class(); ?>" href="<?= base_url($this->router->fetch_class()) . '/del/' . $voluntario->id; ?>" class="btn btn-danger">Sim, excluir</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
