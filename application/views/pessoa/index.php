@@ -42,7 +42,7 @@
                                 </div>
                             </div>
 
-
+                            <!--    
                         <?php elseif ($erro = $this->session->flashdata('error')) : ?>
 
                             <div class="row">
@@ -54,7 +54,7 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
 
                         <?php endif; ?>
 
