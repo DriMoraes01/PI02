@@ -1,4 +1,4 @@
-<header class="header-top" header-theme="red">
+<header class="header-top"  style="background-color: MediumAquamarine;">
     <div class="container-fluid">
         <div class="d-flex justify-content-between">
             <div class="top-menu d-flex align-items-center">
