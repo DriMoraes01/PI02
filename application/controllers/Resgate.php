@@ -54,7 +54,7 @@ class Resgate extends CI_Controller {
 
 			$data = array(
 				'titulo' => 'Cadastrar Resgate',				
-				'icone_view' => 'ik ik-user',	
+				'icone_view' => 'fas fa-truck',	
 				'styles' => array(
 					'plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css',				
 				),

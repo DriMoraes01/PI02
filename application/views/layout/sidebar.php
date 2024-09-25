@@ -13,7 +13,7 @@
         </div>
 
 
-        <div class="sidebar-content" style="background-color: CadetBlue;">
+       <div class="sidebar-content" style="background-color: CadetBlue;">
             <div class="nav-container">
                 <nav id="main-menu-navigation" class="navigation-main">
                     <div class="nav-item">
@@ -49,5 +49,6 @@
                     <?php endif; ?>
                 </nav>
             </div>
-        </div>
+        </div>      
+
     </div>

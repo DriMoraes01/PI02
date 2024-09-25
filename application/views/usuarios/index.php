@@ -9,7 +9,7 @@
                 <div class="row align-items-end">
                     <div class="col-lg-8">
                         <div class="page-header-title">
-                            <i class="ik ik-users bg-blue"></i>
+                            <i class="ik ik-users" style=" background-color: DarkOrange;"></i>
                             <div class="d-inline">
                                 <h5><?php echo $titulo; ?></h5>
                                 <span><?php echo $sub_titulo; ?></span>
@@ -44,9 +44,9 @@
 
             <?php endif; ?>
 
-            
 
-           
+
+
             <!--<div class="row">
                 <div class="col-md-12">
                     <div class="card">
@@ -113,7 +113,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header d-block">
-                            <a class="btn bg-blue float-right text-white"
+                            <a class="btn float-right text-white" style=" background-color: DarkOrange;"
                                 data-toggle="tooltip"
                                 data-placement="right"
                                 title="Cadastrar <?= $this->router->fetch_class(); ?>"
