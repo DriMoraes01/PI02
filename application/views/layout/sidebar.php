@@ -1,6 +1,6 @@
 <div class="page-wrap">
     <div class="app-sidebar colored">
-        <div class="sidebar-header" style="background-color: DarkSlateGray;">
+        <div class="sidebar-header" style="background-color: Black;">
             <a class="header-brand" href="javascript:void(0)">
                 <span style="color: #f2f3ef; font-family: 'Fjalla One', sans-serif; font-size: 20px;">HelpOnPets</span>
                 <button type="button" class="nav-toggle">
@@ -13,7 +13,7 @@
         </div>
 
 
-        <div class="sidebar-content" style="background-color: DarkSlateGray;">
+        <div class="sidebar-content" style="background-color: grey31;">
             <div class="nav-container">
                 <nav id="main-menu-navigation" class="navigation-main">
                     <div class="nav-item">
@@ -21,7 +21,7 @@
                     </div>
                     <div class="nav-item has-sub">
                         <a href="javascript:void(0)"><i class="ik ik-user" style="color: White;"></i><span style="color: #f2f3ef; font-family: 'Roboto', sans-serif; font-size: 14px;">Pessoas</span></a>
-                        <div class="submenu-content" style="background-color: DarkSlateGray;">
+                        <div class="submenu-content" style="background-color: grey31;">
                             <a href="<?= base_url('pessoa'); ?>"><i class="ik ik-user" style="color: White;"></i><span style="color: #f2f3ef; font-family: 'Roboto', sans-serif; font-size: 14px;">Pessoas</span></a>
                             <a href="<?= base_url('voluntario'); ?>"><i class="ik ik-user" style="color: White;"></i><span style="color: #f2f3ef; font-family: 'Roboto', sans-serif; font-size: 14px;">Voluntários</span> <span class="badge badge-success"></span></a>
                         </div>
@@ -39,7 +39,7 @@
                         <a href="<?= base_url('resgate'); ?>"><i class="ik ik-truck" style="color: White;"></i><span style="color: #f2f3ef; font-family: 'Roboto', sans-serif; font-size: 14px;">Resgate de Animais</span> <span class="badge badge-success"></span></a>
                     </div>
                     <?php if ($this->ion_auth->is_admin()) : ?>
-                        <div class="nav-lavel" style=" background-color: DarkSlateGray;"><span style="color: #f2f3ef; font-family: 'Roboto', sans-serif; font-size: 16px;">Administração</span></div>
+                        <div class="nav-lavel" style=" background-color: Black;"><span style="color: #f2f3ef; font-family: 'Roboto', sans-serif; font-size: 16px;">Administração</span></div>
                         <div class="nav-item <?php echo ($this->router->fetch_class() == 'usuarios' && $this->router->fetch_method() == 'index' ? 'active' : ''); ?>">
                             <a href="<?= base_url('usuarios'); ?>"><i class="fas fa-users" style="color: White;"></i><span style="color: #f2f3ef; font-family: 'Roboto', sans-serif; font-size: 14px;">Usuários</span> <span class="badge badge-success"></span></a>
                         </div>
