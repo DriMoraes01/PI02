@@ -9,7 +9,7 @@
                 <div class="row align-items-end">
                     <div class="col-lg-8">
                         <div class="page-header-title">
-                            <i class="<?= $icone_view; ?> bg-blue"></i>
+                            <i class="<?= $icone_view; ?>" style=" background-color: DarkOrange;"></i>
                             <div class="d-inline">
                                 <h5><?php echo $titulo; ?></h5>
                                 <span><?php echo $sub_titulo; ?></span>
@@ -177,7 +177,7 @@
                                                         <img src="<?= base_url($pessoa->foto) ?>" alt="Foto de perfil de <?= htmlspecialchars($pessoa->nome) ?>" width="50" height="50" class="rounded-circle">
                                                     </div>
                                                 </div>
-                                             <div class="form-group row">
+                                                <div class="form-group row">
                                                     <div class="col-md-2 mb-20">
                                                         <label for="cpf">CPF</label>
                                                         <input type="text" class="form-control" id="cpf" name="cpf" value="<?= isset($pessoa) ? $pessoa->cpf : ''; ?>" readonly aria-describedby="cpfHelp">
@@ -192,7 +192,7 @@
                                                         <label for="celular">Celular</label>
                                                         <input type="text" class="form-control" id="celular" name="celular" value="<?= isset($pessoa) ? $pessoa->celular : ''; ?>" readonly aria-describedby="celularHelp">
                                                         <small id="celularHelp" class="form-text text-muted">Número do celular da pessoa.</small>
-                                                    </div> 
+                                                    </div>
                                                     <div class="col-md-3 mb-20">
                                                         <label for="cep">CEP</label>
                                                         <input type="text" class="form-control" id="cep" name="cep" maxlength="9" value="<?= isset($pessoa) ? $pessoa->cep : ''; ?>" readonly aria-describedby="cepHelp">

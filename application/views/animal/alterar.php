@@ -9,7 +9,7 @@
                 <div class="row align-items-end">
                     <div class="col-lg-8">
                         <div class="page-header-title">
-                            <i class="<?= $icone_view; ?> bg-blue"></i>
+                            <i class="<?= $icone_view; ?>" style=" background-color: DarkOrange;"></i>
                             <div class="d-inline">
                                 <h5><?php echo $titulo; ?></h5>
                             </div>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-
+            <!--
             <?php if ($error = $this->session->flashdata('error')) : ?>
 
                 <div class="row">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-            <?php endif; ?>
+            <?php endif; ?> -->
 
 
             <!--<div class="row">

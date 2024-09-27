@@ -9,7 +9,7 @@
                 <div class="row align-items-end">
                     <div class="col-lg-8">
                         <div class="page-header-title">
-                            <i class="<?= $icone_view; ?> bg-blue"></i>
+                            <i class="<?= $icone_view; ?>" style=" background-color: DarkOrange;"></i>
                             <div class="d-inline">
                                 <h5><?php echo $titulo; ?></h5>
                             </div>
@@ -109,39 +109,39 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-md-2 mb-20">
-                                            <label for="valor">Valor</label>
-                                            <div class="input-group mb-3">
+                                        <div class="col-md-3 mt-10">
+                                            <div class="form-group">
+                                                <label for="valor">Valor</label>
                                                 <input type="text" class="form-control" placeholder="R$" id="valor" name="valor" aria-describedby="valorHelp">
                                                 <small id="valorHelp" class="form-text text-muted">Informe o valor da doação.</small>
                                                 <?= form_error('valor', '<div class="text-danger" role="alert">', '</div>'); ?>
                                             </div>
                                         </div>
-                                        <div class="col-md-2 mt-10">
-                                            <div class="form-group">
-                                                <label for="data_doacao">Data da Doação</label>
-                                                <input type="date" class="form-control" id="data_doacao" name="data_doacao" aria-describedby="dataHelp">
-                                                <small id="dataHelp" class="form-text text-muted">Selecione a data da doação.</small>
-                                                <?= form_error('data_doacao', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                            <div class="col-md-2 mt-10">
+                                                <div class="form-group">
+                                                    <label for="data_doacao">Data da Doação</label>
+                                                    <input type="date" class="form-control" id="data_doacao" name="data_doacao" aria-describedby="dataHelp">
+                                                    <small id="dataHelp" class="form-text text-muted">Selecione a data da doação.</small>
+                                                    <?= form_error('data_doacao', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mt-10">
+                                                <div class="form-group">
+                                                    <label for="email">E-mail</label>
+                                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                                                    <small id="emailHelp" class="form-text text-muted">Informe um e-mail válido.</small>
+                                                    <?= form_error('email', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mt-10">
-                                            <div class="form-group">
-                                                <label for="email">E-mail</label>
-                                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
-                                                <small id="emailHelp" class="form-text text-muted">Informe um e-mail válido.</small>
-                                                <?= form_error('email', '<div class="text-danger" role="alert">', '</div>'); ?>
+                                        <div class="form-group row">
+                                            <div class="col-md-6 ml-20">
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary" aria-label="Cadastrar doação">Cadastrar</button>
+                                                    <a href="<?= base_url($this->router->fetch_class()); ?>" class="btn btn-info ml-20" aria-label="Voltar para a página anterior">Voltar</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-md-6 ml-20">
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-primary" aria-label="Cadastrar doação">Cadastrar</button>
-                                                <a href="<?= base_url($this->router->fetch_class()); ?>" class="btn btn-info ml-20" aria-label="Voltar para a página anterior">Voltar</a>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </fieldset>
                             </form>
                         </div>

@@ -199,16 +199,19 @@
                                         <label for="cpf">CPF</label>
                                         <input type="text" class="form-control" id="cpf" name="cpf" value="<?= set_value('cpf'); ?>" placeholder="111.111.111-01" aria-describedby="cpfHelp">
                                         <?= form_error('cpf', '<div class="text-danger" id="cpfHelp">', '</div>'); ?>
+                                        <small id="cpfHelp" class="form-text text-muted">Número do CPF.</small>
                                     </div>
                                     <div class="col-md-3 mb-20">
                                         <label for="nome">Nome</label>
                                         <input type="text" class="form-control" id="nome" name="nome" value="<?= set_value('nome'); ?>" style="text-transform: uppercase;" aria-describedby="nomeHelp">
                                         <?= form_error('nome', '<div class="text-danger" id="nomeHelp">', '</div>'); ?>
+                                        <small id="nome" class="form-text text-muted">Nome Completo.</small>
                                     </div>
                                     <div class="col-md-2 mb-20">
                                         <label for="data_nascimento">Data de Nascimento</label>
                                         <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" value="<?= set_value('data_nascimento'); ?>" aria-describedby="dataNascimentoHelp">
                                         <?= form_error('data_nascimento', '<div class="text-danger" id="dataNascimentoHelp">', '</div>'); ?>
+                                        <small id="dataNascimentoHelp" class="form-text text-muted">Data de nascimento.</small>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
@@ -218,7 +221,7 @@
                                                 <option value="Feminino">Feminino</option>
                                                 <option value="Outro">Prefiro não Dizer</option>
                                             </select>
-                                            <small id="sexoHelp" class="form-text text-muted"></small>
+                                            <small id="sexoHelp" class="form-text text-muted">Sexo.</small>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -227,7 +230,7 @@
                                             <option value="1">Sim</option>
                                             <option value="0">Não</option>
                                         </select>
-                                        <small id="voluntarioHelp" class="form-text text-muted"></small>
+                                        <small id="voluntarioHelp" class="form-text text-muted">Indica se a pessoa é voluntária.</small>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -236,6 +239,7 @@
                                             <label for="celular">Celular</label>
                                             <input type="text" class="form-control" id="celular" name="celular" placeholder="(99)99999-9999" aria-describedby="celularHelp">
                                             <?= form_error('celular', '<div class="text-danger" id="celularHelp">', '</div>'); ?>
+                                            <small id="celularHelp" class="form-text text-muted">Número do celular.</small>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -243,16 +247,19 @@
                                             <label for="email">E-mail</label>
                                             <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                                             <?= form_error('email', '<div class="text-danger" id="emailHelp">', '</div>'); ?>
+                                            <small id="emailHelp" class="form-text text-muted">Endereço de e-mail.</small>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 mb-20">
+                                    <div class="col-md-4">
                                         <label for="cep">CEP</label>
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control" placeholder="00000-000" id="cep" name="cep" maxlength="9" onblur="pesquisacep(this.value)" aria-describedby="cepHelp">
                                             <div class="input-group-append">
                                                 <button class="btn btn-outline-secondary" type="button">Buscar</button>
                                             </div>
+                                            <small id="cepHelp" class="form-text text-muted">Código postal.</small>
                                             <?= form_error('cep', '<div class="text-danger" id="cepHelp">', '</div>'); ?>
+
                                         </div>
                                     </div>
                                 </div>
@@ -262,6 +269,7 @@
                                             <label for="logradouro">Logradouro</label>
                                             <input type="text" class="form-control" id="logradouro" name="logradouro" aria-describedby="logradouroHelp">
                                             <?= form_error('logradouro', '<div class="text-danger" id="logradouroHelp">', '</div>'); ?>
+                                            <small id="logradouroHelp" class="form-text text-muted">Endereço.</small>
                                         </div>
                                     </div>
                                     <div class="col-md-1">
@@ -269,14 +277,14 @@
                                             <label for="numero">N°</label>
                                             <input type="text" class="form-control" id="numero" name="numero" aria-describedby="numeroHelp">
                                             <?= form_error('numero', '<div class="text-danger" id="numeroHelp">', '</div>'); ?>
-                                            <small id="numeroHelp" class="form-text text-muted"></small>
+                                            <small id="numeroHelp" class="form-text text-muted">Número.</small>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="complemento">Complemento</label>
                                             <input type="text" class="form-control" id="complemento" name="complemento" aria-describedby="complementoHelp">
-                                            <small id="complementoHelp" class="form-text text-muted"></small>
+                                            <small id="complementoHelp" class="form-text text-muted">Complemento.</small>
                                         </div>
                                     </div>
                                     <div class="col-md-3 ml-20">
@@ -284,7 +292,7 @@
                                             <label for="bairro">Bairro</label>
                                             <input type="text" class="form-control" id="bairro" name="bairro" aria-describedby="bairroHelp">
                                             <?= form_error('bairro', '<div class="text-danger" id="bairroHelp">', '</div>'); ?>
-                                            <small id="bairroHelp" class="form-text text-muted"></small>
+                                            <small id="bairroHelp" class="form-text text-muted">Bairro onde a pessoa reside.</small>
                                         </div>
                                     </div>
                                 </div>
@@ -294,7 +302,7 @@
                                             <label for="localidade">Cidade</label>
                                             <input type="text" class="form-control" id="localidade" name="localidade" aria-describedby="localidadeHelp">
                                             <?= form_error('localidade', '<div class="text-danger" id="localidadeHelp">', '</div>'); ?>
-                                            <small id="localidadeHelp" class="form-text text-muted"></small>
+                                            <small id="localidadeHelp" class="form-text text-muted">Cidade.</small>
                                         </div>
                                     </div>
                                     <div class="col-md-1">
@@ -302,7 +310,7 @@
                                             <label for="uf">UF</label>
                                             <input type="text" class="form-control" id="uf" name="uf" aria-describedby="ufHelp">
                                             <?= form_error('uf', '<div class="text-danger" id="ufHelp">', '</div>'); ?>
-                                            <small id="ufHelp" class="form-text text-muted"></small>
+                                            <small id="ufHelp" class="form-text text-muted">Unidade Federativa (Estado).</small>
                                         </div>
                                     </div>
                                     <div class="col-md-2">

@@ -9,7 +9,7 @@
                 <div class="row align-items-end">
                     <div class="col-lg-8">
                         <div class="page-header-title">
-                            <i class="<?= $icone_view; ?> bg-blue"></i>
+                            <i class="<?= $icone_view; ?>" style=" background-color: DarkOrange;"></i>
                             <div class="d-inline">
                                 <h5><?php echo $titulo; ?></h5>
                             </div>
@@ -88,7 +88,7 @@
                 <div class="col-md-12">
                     <?php foreach ($doacoes as $doacao) : ?>
                         <div class="card">
-                           <!-- <div class="card-header">
+                            <!-- <div class="card-header">
                                 <?= (isset($doacao) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i>&nbsp;Data da última alteração: &nbsp;' . date("d/m/Y H:i:s", strtotime($doacao->ultima_alteracao)) : ''); ?>
                             </div> -->
                             <div class="card-body">

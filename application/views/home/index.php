@@ -11,11 +11,11 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:DarkBlue;">Animais</h6>
-                                <h3 class="fw-700 text-center" style="color: DarkBlue;"><?= $totAnimais; ?></h3>
+                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:Black;">Animais</h6>
+                                <h3 class="fw-700 text-center" style="color: Black;"><?= $totAnimais; ?></h3>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-star" style="background-color: DarkOrange;"></i>
+                                <i class="fas fa-star" style="background-color: Crimson;"></i>
                             </div>
                         </div>
                     </div>
@@ -26,11 +26,11 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:DarkBlue;">Voluntários</h6>
-                                <h3 class="fw-700 text-center" style="color: DarkBlue;"><?= $totVoluntarios; ?></h3>
+                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:Black;">Voluntários</h6>
+                                <h3 class="fw-700 text-center" style="color: Black;"><?= $totVoluntarios; ?></h3>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-user" style="background-color: DarkOrange;"></i>
+                                <i class="fas fa-user" style="background-color: MediumBlue;"></i>
                             </div>
                         </div>
                     </div>
@@ -41,11 +41,11 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color: DarkBlue;">Doações</h6>
-                                <h3 class="fw-700 text-center" style="color: DarkBlue;">R$<?php echo $totDoacoes->valor_doacoes; ?></h3>
+                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color: Black;">Doações</h6>
+                                <h3 class="fw-700 text-center" style="color: Black;">R$<?php echo $totDoacoes->valor_doacoes; ?></h3>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-dollar-sign" style="background-color: DarkOrange;"></i>
+                                <i class="fas fa-dollar-sign" style="background-color: DarkMagenta;"></i>
                             </div>
                         </div>
                     </div>
@@ -58,11 +58,11 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:DarkBlue;">Adoções</h6>
-                                <h3 class="fw-700 text-center" style="color: DarkBlue;"><?= $totAdocoes; ?></h3>
+                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:Black;">Adoções</h6>
+                                <h3 class="fw-700 text-center" style="color: Black;"><?= $totAdocoes; ?></h3>
                             </div>
                             <div class=" col-auto">
-                                <i class="fas fa-sun" style="background-color: DarkOrange;"></i>
+                                <i class="fas fa-sun" style="background-color: LimeGreen;"></i>
                             </div>
                         </div>
                     </div>
@@ -73,11 +73,11 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:DarkBlue;">Resgates de Animais</h6>
-                                <h3 class="fw-700 text-center" style="color: DarkBlue;"><?= $totResgates; ?></h3>
+                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:Black;">Resgates de Animais</h6>
+                                <h3 class="fw-700 text-center" style="color: Black;"><?= $totResgates; ?></h3>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-truck" style="background-color: DarkOrange;"></i>
+                                <i class="fas fa-truck" style="background-color: OrangeRed;"></i>
                             </div>
                         </div>
                     </div>
@@ -88,11 +88,11 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:DarkBlue;">Usuários</h6>
-                                <h3 class="fw-700 text-center" style="color: DarkBlue;"><?= $totUsers; ?></h3>
+                                <h6 class="mb-25 text-center" style="font-family: 'Roboto', sans-serif; font-size: 18px; color:Black;">Usuários</h6>
+                                <h3 class="fw-700 text-center" style="color: Black;"><?= $totUsers; ?></h3>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-users" style="background-color: DarkOrange;"></i>
+                                <i class="fas fa-users" style="background-color: DarkRed;"></i>
                             </div>
                         </div>
                     </div>
