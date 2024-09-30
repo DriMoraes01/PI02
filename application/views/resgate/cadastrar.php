@@ -162,32 +162,19 @@
                                             <?= form_error('sexo', '<div class="text-danger" id="sexo">', '</div>'); ?>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <!--<div class="col-md-3 mb-20">
+                                    <div class="form-group row">                                        
+                                        <div class="col-md-3 mb-20">
                                             <label for="cep">CEP:</label>
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="00000-000" id="cep" name="cep" maxlength="9" onblur="pesquisacep(this.value)" aria-describedby="cepHelp">
+                                                <input type="text" class="form-control" placeholder="00000-000" id="cep" name="cep" maxlength="9" onblur="pesquisacep(this.value)" aria-required="true">
                                                 <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                                                    <button class="btn btn-outline-secondary" type="button" aria-label="Buscar CEP">Buscar</button>
                                                 </div>
-                                                <br><small id="cep" class="form-text text-muted">
-                                                    <?= form_error('cep', '<div class="text-danger" id="cep">', '</div>'); ?>
+                                                <?= form_error('cep', '<div class="text-danger" role="alert">', '</div>'); ?>
                                             </div>
-                                        </div> -->
-                                        
-                                            <div class="col-md-3 mb-20">
-                                                <label for="cep">CEP:</label>
-                                                <div class="input-group mb-3">
-                                                    <input type="text" class="form-control" placeholder="00000-000" id="cep" name="cep" maxlength="9" onblur="pesquisacep(this.value)" aria-required="true">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-outline-secondary" type="button" aria-label="Buscar CEP">Buscar</button>
-                                                    </div>
-                                                    <?= form_error('cep', '<div class="text-danger" role="alert">', '</div>'); ?>
-                                                </div>
-                                                <small id="cep" class="form-text text-muted">CEP</small>
-                                            </div>                                        
+                                            <small id="cep" class="form-text text-muted">CEP</small>
+                                        </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <div class="col-md-4">
                                             <label for="logradouro">Logradouro:</label>
@@ -225,6 +212,7 @@
                                         <div class="col-md-4">
                                             <label for="observacao">Observação</label>
                                             <input type="text" class="form-control" id="observacao" name="observacao" aria-describedby="observacaoHelp">
+                                            <small id="observacao" class="form-text text-muted">Observação</small>
                                             <?= form_error('observacao', '<div class="text-danger" id="observacao">', '</div>'); ?>
                                         </div>
                                     </div>
