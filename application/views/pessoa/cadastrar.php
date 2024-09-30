@@ -259,7 +259,6 @@
                                             </div>
                                             <small id="cepHelp" class="form-text text-muted">Código postal.</small>
                                             <?= form_error('cep', '<div class="text-danger" id="cepHelp">', '</div>'); ?>
-
                                         </div>
                                     </div>
                                 </div>
