@@ -218,7 +218,7 @@
                                     <div class="col-md-6">
                                         <label for="foto">Foto do Animal</label>
                                         <input type="file" class="form-control" id="foto" name="foto" aria-describedby="fotoHelp" aria-required="true">
-                                        <small id="foto" class="form-text text-muted">Envie uma foto do animal no formato JPEG ou PNG.</small>
+                                        <small id="foto" class="form-text text-muted">Envie uma foto do animal</small>
                                     </div>
                                 </div>
 

@@ -144,7 +144,7 @@
                                         <div class="col-md-2 mb-20">
                                             <label for="animal">Tipo de Animal</label>
                                             <input type="text" class="form-control" id="animal" name="animal" value="<?= set_value('animal'); ?>" placeholder="Gato" aria-describedby="animalHelp">
-                                            <small id="nome" class="form-text text-muted">Informe o nome completo.</small>
+                                            <small id="nome" class="form-text text-muted">Informe o nome do animal.</small>
                                             <?= form_error('animal', '<div class="text-danger" id="animalHelp">', '</div>'); ?>
                                         </div>
                                         <div class="col-md-2 mb-20">
@@ -159,10 +159,11 @@
                                                 <option value="Macho">Macho</option>
                                                 <option value="Fêmea">Fêmea</option>
                                             </select>
+                                            <small id="data_resgate" class="form-text text-muted">Informe o Sexo do Animal.</small>
                                             <?= form_error('sexo', '<div class="text-danger" id="sexo">', '</div>'); ?>
                                         </div>
                                     </div>
-                                    <div class="form-group row">                                        
+                                    <div class="form-group row">
                                         <div class="col-md-3 mb-20">
                                             <label for="cep">CEP:</label>
                                             <div class="input-group mb-3">
@@ -179,20 +180,19 @@
                                         <div class="col-md-4">
                                             <label for="logradouro">Logradouro:</label>
                                             <input type="text" class="form-control" id="logradouro" name="logradouro" aria-describedby="logradouroHelp">
-                                            <small id="logradouro" class="form-text text-muted">Cidade</small>
+                                            <small id="logradouro" class="form-text text-muted">Rua, Avenida</small>
                                             <?= form_error('logradouro', '<div class="text-danger" id="logradouro">', '</div>'); ?>
-                                            <small id="logradouro" class="form-text text-muted">Informe a Cidade.</small>
                                         </div>
                                         <div class="col-md-1">
                                             <label for="numero">N°:</label>
-                                            <input type="text" class="form-control" id="numero" name="numero" aria-describedby="numeroHelp">
-                                            <small id="numero" class="form-text text-muted">Número</small>
+                                            <input type="text" class="form-control" id="numero" name="numero" aria-describedby="numeroHelp">                                          
+                                            <small id="logradouro" class="form-text text-muted">Informe o Número.</small>
                                             <?= form_error('numero', '<div class="text-danger" id="numero">', '</div>'); ?>
                                         </div>
                                         <div class="col-md-3 ml-20">
                                             <label for="bairro">Bairro:</label>
                                             <input type="text" class="form-control" id="bairro" name="bairro" aria-describedby="bairroHelp">
-                                            <small id="bairro" class="form-text text-muted">Bairro</small>
+                                            <small id="bairro" class="form-text text-muted">Informe o Bairro.</small>
                                             <?= form_error('bairro', '<div class="text-danger" id="bairro">', '</div>'); ?>
                                         </div>
                                     </div>

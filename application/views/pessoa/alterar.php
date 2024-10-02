@@ -200,21 +200,24 @@
                                             <label for="cpf">CPF</label>
                                             <input type="text" class="form-control" id="cpf" name="cpf" value="<?= (isset($pessoa) ? $pessoa->cpf : set_value('cpf')); ?>" aria-describedby="cpfHelp">
                                             <?= form_error('cpf', '<div class="text-danger" id="cpfHelp">', '</div>'); ?>
+                                            <small id="cpf" class="form-text text-muted">Informe o CPF</small>
                                         </div>
                                         <div class="col-md-3 mb-20">
                                             <label for="nome">Nome</label>
                                             <input type="text" class="form-control" id="nome" name="nome" value="<?= (isset($pessoa) ? $pessoa->nome : set_value('nome')); ?>" style="text-transform: uppercase;" aria-describedby="nomeHelp">
                                             <?= form_error('nome', '<div class="text-danger" id="nomeHelp">', '</div>'); ?>
+                                            <small id="nome" class="form-text text-muted">Informe o Nome Completo</small>
                                         </div>
                                         <div class="col-md-2 mb-20">
                                             <label for="data_nascimento">Data de Nascimento</label>
                                             <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" value="<?= (isset($pessoa) ? $pessoa->data_nascimento : set_value('data_nascimento')); ?>" aria-describedby="dataNascimentoHelp">
-                                            <?= form_error('data_nascimento', '<div class="text-danger" id="dataNascimentoHelp">', '</div>'); ?>
+                                            <?= form_error('data_nascimento', '<div class="text-danger" id="data_nascimento">', '</div>'); ?>
+                                            <small id="data_nascimento" class="form-text text-muted">Informe a Data de Nascimento</small>
                                         </div>
                                         <div class="col-md-2 mb-20">
                                             <label for="sexo">Sexo</label>
                                             <input type="text" class="form-control" name="sexo" id="sexo" value="<?= (isset($pessoa) ? $pessoa->sexo : set_value('sexo')); ?>" aria-describedby="sexoHelp">
-                                            <small id="sexoHelp" class="form-text text-muted"></small>
+                                            <small id="sexo" class="form-text text-muted">Informe o Sexo</small>
                                         </div>
                                         <div class="form-group">
                                             <label for="voluntario">É Voluntário</label><br>
@@ -222,7 +225,7 @@
                                                 <option value="1" <?= isset($pessoa) && $pessoa->voluntario == 1 ? 'selected' : ''; ?>>Sim</option>
                                                 <option value="0" <?= isset($pessoa) && $pessoa->voluntario == 0 ? 'selected' : ''; ?>>Não</option>
                                             </select>
-                                            <small id="voluntarioHelp" class="form-text text-muted"></small>
+                                            <small id="voluntario" class="form-text text-muted">Informe se a pessoa é voluntária ou não</small>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -231,12 +234,14 @@
                                                 <label for="celular">Celular</label>
                                                 <input type="text" class="form-control" id="celular" name="celular" value="<?= (isset($pessoa) ? $pessoa->celular : set_value('celular')); ?>" aria-describedby="celularHelp">
                                                 <?= form_error('celular', '<div class="text-danger" id="celularHelp">', '</div>'); ?>
+                                                <small id="celular" class="form-text text-muted">Informe o número de celular</small>
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-20">
                                             <label for="email">Email</label>
-                                            <input type="email" id="email" class="form-control" name="email" value="<?= (isset($pessoa) ? $pessoa->email : set_value('email')); ?>" aria-describedby="emailHelp">
-                                            <?= form_error('email', '<div class="text-danger" id="emailHelp">', '</div>'); ?>
+                                            <input type="email" id="email" class="form-control" name="email" value="<?= (isset($pessoa) ? $pessoa->email : set_value('email')); ?>" aria-describedby="email">
+                                            <?= form_error('email', '<div class="text-danger" id="email">', '</div>'); ?>
+                                            <small id="email" class="form-text text-muted">Informe o e-mail</small>
                                         </div>
                                         <div class="col-md-3 mb-20">
                                             <label for="cep">CEP</label>
@@ -246,6 +251,7 @@
                                                     <button class="btn btn-outline-secondary" type="button">Buscar</button>
                                                 </div>
                                                 <?= form_error('cep', '<div class="text-danger" id="cepHelp">', '</div>'); ?>
+                                                <small id="email" class="form-text text-muted">CEP</small>
                                             </div>
                                         </div>
                                     </div>
@@ -255,6 +261,7 @@
                                                 <label for="logradouro">Logradouro</label>
                                                 <input type="text" class="form-control" id="logradouro" name="logradouro" value="<?= (isset($pessoa) ? $pessoa->logradouro : set_value('logradouro')); ?>" aria-describedby="logradouroHelp">
                                                 <?= form_error('logradouro', '<div class="text-danger" id="logradouroHelp">', '</div>'); ?>
+                                                <small id="logradouro" class="form-text text-muted">Rua, Avenida</small>
                                             </div>
                                         </div>
                                         <div class="col-md-1">
@@ -262,19 +269,21 @@
                                                 <label for="numero">N°</label>
                                                 <input type="text" class="form-control" id="numero" name="numero" value="<?= (isset($pessoa) ? $pessoa->numero : set_value('numero')); ?>" aria-describedby="numeroHelp">
                                                 <?= form_error('numero', '<div class="text-danger" id="numeroHelp">', '</div>'); ?>
+                                                <small id="numero" class="form-text text-muted">Número</small>
                                             </div>
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
                                                 <label for="complemento">Complemento</label>
                                                 <input type="text" class="form-control" id="complemento" name="complemento" value="<?= (isset($pessoa) ? $pessoa->complemento : set_value('complemento')); ?>" aria-describedby="complementoHelp">
-                                                <small id="complementoHelp" class="form-text text-muted"></small>
+                                                <small id="complemento" class="form-text text-muted">Complemento</small>
                                             </div>
                                         </div>
                                         <div class="col-md-3 ml-20">
                                             <label for="bairro">Bairro</label>
                                             <input type="text" class="form-control" id="bairro" name="bairro" value="<?= (isset($pessoa) ? $pessoa->bairro : set_value('bairro')); ?>" aria-describedby="bairroHelp">
                                             <?= form_error('bairro', '<div class="text-danger" id="bairroHelp">', '</div>'); ?>
+                                            <small id="bairro" class="form-text text-muted">Bairro</small>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -283,6 +292,7 @@
                                                 <label for="localidade">Cidade</label>
                                                 <input type="text" class="form-control" id="localidade" name="localidade" value="<?= (isset($pessoa) ? $pessoa->localidade : set_value('localidade')); ?>" aria-describedby="localidadeHelp">
                                                 <?= form_error('localidade', '<div class="text-danger" id="localidadeHelp">', '</div>'); ?>
+                                                <small id="localidade" class="form-text text-muted">Cidade</small>
                                             </div>
                                         </div>
                                         <div class="col-md-1">
@@ -290,13 +300,15 @@
                                                 <label for="uf">UF</label>
                                                 <input type="text" class="form-control" id="uf" name="uf" value="<?= (isset($pessoa) ? $pessoa->uf : set_value('uf')); ?>" aria-describedby="ufHelp">
                                                 <?= form_error('uf', '<div class="text-danger" id="ufHelp">', '</div>'); ?>
+                                                <small id="uf" class="form-text text-muted">Estado</small>
                                             </div>
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
                                                 <label for="data_cadastro">Data de Cadastro</label>
                                                 <input type="date" class="form-control" id="data_cadastro" name="data_cadastro" value="<?= (isset($pessoa) ? $pessoa->data_cadastro : set_value('data_cadastro')); ?>" aria-describedby="dataCadastroHelp">
-                                                <?= form_error('data_cadastro', '<div class="text-danger" id="dataCadastroHelp">', '</div>'); ?>
+                                                <?= form_error('data_cadastro', '<div class="text-danger" id="data_cadastro">', '</div>'); ?>
+                                                <small id="data_cadastro" class="form-text text-muted">Data de Cadastro</small>
                                             </div>
                                         </div>
                                     </div>
@@ -305,7 +317,8 @@
                                             <div class="form-group">
                                                 <label for="foto">Foto</label>
                                                 <input type="file" class="form-control" id="foto" name="foto" aria-describedby="fotoHelp" value="<?= set_value('foto'); ?>" required>
-                                                <?= form_error('foto', '<div class="text-danger" id="fotoHelp">', '</div>'); ?>
+                                                <?= form_error('foto', '<div class="text-danger" id="foto">', '</div>'); ?>
+                                                <small id="foto" class="form-text text-muted">Foto da Pessoa</small>
                                             </div>
                                         </div>
                                     </div>

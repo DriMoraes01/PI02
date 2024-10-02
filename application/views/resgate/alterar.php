@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <!--<div class="row">
+            <div class="row">
                 <div class="col-md-12">
                     <?php foreach ($resgates as $resgate) : ?>
                         <div class="card">
@@ -40,11 +40,13 @@
                                             <label>Tipo de Animal</label>
                                             <input type="text" class="form-control" id="animal" name="animal" value="<?= (isset($resgate) ? $resgate->animal : set_value('animal')); ?>">
                                             <?= form_error('animal', '<div class="text-danger">', '</div>'); ?>
+                                            <small id="animal" class="form-text text-muted">Informe o tipo de animal</small>
                                         </div>
                                         <div class="col-md-2 mb-20">
                                             <label>Data de Resgate</label>
                                             <input type="text" class="form-control" id="data_resgate" name="data_resgate" value="<?= (isset($resgate) ? formata_data_banco_sem_hora($resgate->data_resgate) : set_value('data_resgate')); ?>" readonly>
                                             <?= form_error('data_resgate', '<div class="text-danger">', '</div>'); ?>
+                                            <small id="data_resgate" class="form-text text-muted">Informe a data de resgate</small>
                                         </div>
                                         <div class="col-md-3 mb-20">
                                             <label>Sexo</label> </br>
@@ -54,6 +56,7 @@
                                             </select>
                                             <small></small>
                                             <?= form_error('sexo', '<div class="text-danger">', '</div>'); ?>
+                                            <small id="sexo" class="form-text text-muted">Informe o sexo do animal</small>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -66,6 +69,7 @@
                                                 </div>
                                                 <?= form_error('cep', '<div class="text-danger">', '</div>'); ?>
                                             </div>
+                                            <small id="cep" class="form-text text-muted">Informe o CEP</small>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -74,7 +78,7 @@
                                                 <label for="logradouro">Logradouro:</label>
                                                 <input type="text" class="form-control" id="logradouro" name="logradouro" value="<?= (isset($resgate) ? $resgate->logradouro : set_value('logradouro')); ?>">
                                                 <?= form_error('logradouro', '<div class="text-danger">', '</div>'); ?>
-                                                <small></small>
+                                                <small id="logradouro" class="form-text text-muted">Rua, Avenida</small>
                                             </div>
                                         </div>
                                         <div class="col-md-1">
@@ -82,14 +86,14 @@
                                                 <label for="numero">N°:</label>
                                                 <input type="text" class="form-control" id="numero" name="numero" value="<?= (isset($resgate) ? $resgate->numero : set_value('numero')); ?>">
                                                 <?= form_error('numero', '<div class="text-danger">', '</div>'); ?>
-                                                <small></small>
+                                                <small id="numero" class="form-text text-muted">Informe o número</small>
                                             </div>
                                         </div>
                                         <div class="col-md-3 ml-20">
                                             <label>Bairro</label>
                                             <input type="text" class="form-control" id="bairro" name="bairro" value="<?= (isset($resgate) ? $resgate->bairro : set_value('bairro')); ?>">
                                             <?= form_error('bairro', '<div class="text-danger">', '</div>'); ?>
-                                            <small></small>
+                                            <small id="bairro" class="form-text text-muted">Informe o bairro</small>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -98,7 +102,7 @@
                                                 <label for="localidade">Cidade:</label>
                                                 <input type="text" class="form-control" id="localidade" name="localidade" value="<?= (isset($resgate) ? $resgate->localidade : set_value('localidade')); ?>">
                                                 <?= form_error('localidade', '<div class="text-danger">', '</div>'); ?>
-                                                <small></small>
+                                                <small id="localidade" class="form-text text-muted">Cidade</small>
                                             </div>
                                         </div>
                                         <div class="col-md-1">
@@ -106,7 +110,7 @@
                                                 <label for="uf">UF:</label>
                                                 <input type="text" class="form-control" id="uf" name="uf" value="<?= (isset($resgate) ? $resgate->uf : set_value('uf')); ?>">
                                                 <?= form_error('uf', '<div class="text-danger">', '</div>'); ?>
-                                                <small></small>
+                                                <small id="uf" class="form-text text-muted">Estado</small>
                                             </div>
                                         </div>
                                         <div class="col-md-5">
@@ -114,7 +118,7 @@
                                                 <label for="observacao">Observação</label>
                                                 <input type="text" class="form-control" id="observacao" name="observacao" value="<?= (isset($resgate) ? $resgate->observacao : set_value('observacao')); ?>">
                                                 <?= form_error('observacao', '<div class="text-danger">', '</div>'); ?>
-                                                <small></small>
+                                                <small id="observacao" class="form-text text-muted">Observação</small>
                                             </div>
                                         </div>
                                     </div>
@@ -136,14 +140,15 @@
                             </div>
                         </div>
                 </div>
-            </div> -->
-            <div class="row">
+            </div>
+            <!--<div class="row">
                 <div class="col-md-12">
                     <?php foreach ($resgates as $resgate) : ?>
                         <div class="card">
-                            <!--<div class="card-header" aria-live="polite">
+                            <div class="card-header" aria-live="polite">
                                 <?= isset($resgate) ? '<i class="ik ik-calendar ik-2x" aria-hidden="true"></i> Data da última alteração: ' . date("d/m/Y H:i:s", strtotime($resgate->ultima_alteracao)) : ''; ?>
                             </div> -->
+            <!--
                             <div class="card-body">
                                 <form class="forms-sample" id="form_core" name="form_core" method="POST" aria-labelledby="form-title-<?= $resgate->id; ?>">
                                     <h2 id="form-title-<?= $resgate->id; ?>" class="sr-only">Formulário de Resgate de Animal</h2>
@@ -152,11 +157,13 @@
                                             <label for="animal-<?= $resgate->id; ?>">Tipo de Animal</label>
                                             <input type="text" class="form-control" id="animal-<?= $resgate->id; ?>" name="animal" value="<?= isset($resgate) ? $resgate->animal : set_value('animal'); ?>" aria-describedby="animalHelp-<?= $resgate->id; ?>">
                                             <?= form_error('animal', '<div class="text-danger" id="animalHelp-' . $resgate->id . '">', '</div>'); ?>
+                                            <small id="nome" class="form-text text-muted">Informe o nome do animal</small>
                                         </div>
                                         <div class="col-md-2 mb-20">
                                             <label for="data_resgate-<?= $resgate->id; ?>">Data de Resgate</label>
                                             <input type="text" class="form-control" id="data_resgate-<?= $resgate->id; ?>" name="data_resgate" value="<?= isset($resgate) ? formata_data_banco_sem_hora($resgate->data_resgate) : set_value('data_resgate'); ?>" readonly aria-describedby="dataResgateHelp-<?= $resgate->id; ?>">
                                             <?= form_error('data_resgate', '<div class="text-danger" id="dataResgateHelp-' . $resgate->id . '">', '</div>'); ?>
+                                            <small id="data_resgate" class="form-text text-muted">Informe a Data de Resgate</small>
                                         </div>
                                         <div class="col-md-3 mb-20">
                                             <label for="sexo-<?= $resgate->id; ?>">Sexo</label> <br>
@@ -164,6 +171,7 @@
                                                 <option value="Macho" <?= isset($resgate) && $resgate->sexo == 'Macho' ? 'selected' : ''; ?>>Macho</option>
                                                 <option value="Fêmea" <?= isset($resgate) && $resgate->sexo == 'Fêmea' ? 'selected' : ''; ?>>Fêmea</option>
                                             </select>
+                                            <small id="sexo" class="form-text text-muted">Informe o Sexo do Animal</small>
                                             <?= form_error('sexo', '<div class="text-danger" id="sexoHelp-' . $resgate->id . '">', '</div>'); ?>
                                         </div>
                                     </div>
@@ -175,7 +183,7 @@
                                                 <div class="input-group-append">
                                                     <button class="btn btn-outline-secondary" type="button">Buscar</button>
                                                 </div>
-                                                <?= form_error('cep', '<div class="text-danger" id="cepHelp-' . $resgate->id . '">', '</div>'); ?>
+                                                <?= form_error('cep', '<div class="text-danger" id="cep-' . $resgate->id . '">', '</div>'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -228,8 +236,8 @@
                                     </div>
                                 </div>
                                 </form>
-                            </div>
+                            </div> 
                         </div>
                 </div>
-            </div>
+            </div> -->
         </div>

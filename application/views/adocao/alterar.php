@@ -182,19 +182,19 @@
                                                 <label for="nome_adotante">Nome do Adotante</label>
                                                 <input type="text" class="form-control" id="nome_adotante" name="nome_adotante" value="<?= (isset($adocao) ? $adocao->nome_adotante : set_value('nome_adotante')); ?>" aria-describedby="nomeAdotanteError">
                                                 <?= form_error('nome_adotante', '<div id="nomeAdotanteError" class="text-danger">', '</div>'); ?>
-                                                <small id="nome_adotante" class="form-text text-muted">Nome Completo.</small>
+                                                <small id="nome_adotante" class="form-text text-muted">Nome Completo</small>
                                             </div>
                                             <div class="col-md-2 mb-20">
                                                 <label for="cpf">CPF</label>
                                                 <input type="text" class="form-control" id="cpf" name="cpf" value="<?= (isset($adocao) ? $adocao->cpf : set_value('cpf')); ?>" aria-describedby="cpfError">
                                                 <?= form_error('cpf', '<div id="cpfError" class="text-danger">', '</div>'); ?>
-                                                <small id="cpf" class="form-text text-muted">Número do CPF.</small>
+                                                <small id="cpf" class="form-text text-muted">Número do CPF</small>
                                             </div>
                                             <div class="col-md-2 mb-20">
                                                 <label for="data_adocao">Data de Adoção</label>
                                                 <input type="date" class="form-control" id="data_adocao" name="data_adocao" value="<?= (isset($adocao) ? $adocao->data_adocao : set_value('data_adocao')); ?>" aria-describedby="dataAdocaoError">
                                                 <?= form_error('data_adocao', '<div id="dataAdocaoError" class="text-danger">', '</div>'); ?>
-                                                <small id="data_adocao" class="form-text text-muted">Data da Adoção.</small>
+                                                <small id="data_adocao" class="form-text text-muted">Data da Adoção</small>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -202,13 +202,13 @@
                                                 <label for="email">E-mail</label>
                                                 <input type="email" class="form-control" id="email" name="email" value="<?= (isset($adocao) ? $adocao->email : set_value('email')); ?>" aria-describedby="emailError">
                                                 <?= form_error('email', '<div id="emailError" class="text-danger">', '</div>'); ?>
-                                                <small id="email" class="form-text text-muted">Endereço de e-mail.</small>
+                                                <small id="email" class="form-text text-muted">Endereço de e-mail</small>
                                             </div>
                                             <div class="col-md-2 mb-20">
                                                 <label for="celular">Celular</label>
                                                 <input type="text" class="form-control" id="celular" name="celular" value="<?= (isset($adocao) ? $adocao->celular : set_value('celular')); ?>" aria-describedby="celularError">
                                                 <?= form_error('celular', '<div id="celularError" class="text-danger">', '</div>'); ?>
-                                                <small id="celular" class="form-text text-muted">Celular.</small>
+                                                <small id="celular" class="form-text text-muted">Celular</small>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -216,13 +216,13 @@
                                                 <label for="tipo_animal">Tipo de Animal</label>
                                                 <input type="text" class="form-control" id="tipo_animal" name="tipo_animal" value="<?= (isset($adocao) ? $adocao->tipo_animal : set_value('tipo_animal')); ?>" aria-describedby="tipoAnimalError">
                                                 <?= form_error('tipo_animal', '<div id="tipoAnimalError" class="text-danger">', '</div>'); ?>
-                                                <small id="tipo_animal" class="form-text text-muted">Tipo de Animal.</small>
+                                                <small id="tipo_animal" class="form-text text-muted">Tipo de Animal</small>
                                             </div>
                                             <div class="col-md-2 mb-20">
                                                 <label for="nome_animal">Nome do Animal</label>
                                                 <input type="text" class="form-control" id="nome_animal" name="nome_animal" value="<?= (isset($adocao) ? $adocao->nome_animal : set_value('nome_animal')); ?>" aria-describedby="nomeAnimalError">
                                                 <?= form_error('nome_animal', '<div id="nomeAnimalError" class="text-danger">', '</div>'); ?>
-                                                <small id="nome_animal" class="form-text text-muted">Nome do Animal.</small>
+                                                <small id="nome_animal" class="form-text text-muted">Nome do Animal</small>
                                             </div>
                                             <div class="col-md-3 mb-20">
                                                 <label for="sexo_animal">Sexo</label>
@@ -252,13 +252,13 @@
                                                 <label for="logradouro">Logradouro:</label>
                                                 <input type="text" class="form-control" id="logradouro" name="logradouro" value="<?= (isset($adocao) ? $adocao->logradouro : set_value('logradouro')); ?>" aria-describedby="logradouroError">
                                                 <?= form_error('logradouro', '<div id="logradouroError" class="text-danger">', '</div>'); ?>
-                                                <small id="logradouro" class="form-text text-muted">Logradouro</small>
+                                                <small id="logradouro" class="form-text text-muted">Rua, Avenida</small>
                                             </div>
                                             <div class="col-md-1">
                                                 <label for="numero">N°:</label>
                                                 <input type="text" class="form-control" id="numero" name="numero" value="<?= (isset($adocao) ? $adocao->numero : set_value('numero')); ?>" aria-describedby="numeroError">
                                                 <?= form_error('numero', '<div id="numeroError" class="text-danger">', '</div>'); ?>
-                                                <small id="numero" class="form-text text-muted">Numero</small>
+                                                <small id="numero" class="form-text text-muted">Número</small>
                                             </div>
                                             <div class="col-md-3 ml-20">
                                                 <label for="bairro">Bairro</label>
