@@ -2,7 +2,7 @@
     <div class="container-fluid h-100">
         <div class="row flex-row h-100 bg-white">
             <div class="col-xl-8 col-lg-6 col-md-5 p-0 d-md-block d-lg-block d-sm-none d-none">
-                <div class="lavalite-bg" style="background-image: url(<?= base_url('assets/img/auth/login.jpg') ?>)">
+                <div class="lavalite-bg" style="background-image: url(<?= base_url('assets/img/auth/loginnew.jpg') ?>)">
                     <div class="lavalite-overlay"></div>
                 </div>
             </div>
@@ -10,7 +10,7 @@
                 <div class="authentication-form mx-auto">
                     <div class="logo-justify">
                         <a class="header-brand" href="javascript:void">
-                            <span style="color: #444444; font-family: 'Fjalla One', sans-serif; font-size: 30px;">HelpOnPets</span>
+                            <span style="color: #1C1C1C; font-family: 'Fjalla One', sans-serif; font-size: 30px;">HelpOnPets</span>
                         </a>
                     </div>
                     <?php if ($message = $this->session->flashdata('sucesso')) : ?>
@@ -43,7 +43,7 @@
 
                     <?php endif; ?>
 
-                    <h3>Seja muito bem-vindo(a)!</h3>
+                    <h3 style="color: #1C1C1C;">Seja muito bem-vindo(a)!</h3>
 
                     <form method="POST" action="<?= base_url('login/auth'); ?>">
                         <div class="form-group">
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="sign-btn text-center">
-                            <button class="btn btn-secondary">Entrar</button>
+                            <button class="btn btn-primary">Entrar</button>
                         </div>
                     </form>
                 </div>

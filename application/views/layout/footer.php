@@ -1,7 +1,7 @@
 <!--<div class="container"> </div> -->
 <footer class="footer" style="background-color: LightCyan;">
     <div class="w-100 clearfix">
-        <p class="text-center" style="color: black;"> Copyright © <?php echo date('Y') ?> ThemeKit v2.0. All Rights Reserved.</p>
+        <p class="text-center" style="color: black; font-family:Montserrat; "> Copyright © <?php echo date('Y') ?> ThemeKit v2.0. All Rights Reserved.</p>
         <!-- <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-dark"></i> by <a href="javascript:void" class="text-dark">Adriele</a></span> -->
     </div>
 </footer>
