@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                                 <div class="sign-btn text-center">
-                                    <button class="btn btn-secondary">Entrar</button>
+                                    <button class="btn btn-primary">Entrar</button>
                                 </div>
                             </form>                            
                         </div>
